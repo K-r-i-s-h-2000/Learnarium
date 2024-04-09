@@ -1,0 +1,76 @@
+<div>
+  <!-- Show student header when userRole is 'student' -->
+  <app-header-landing *ngIf=" userRole === 'STUDENT'"></app-header-landing>
+
+  <!-- Show instructor header when userRole is 'instructor' -->
+  <app-header-instructor *ngIf="userRole === 'INSTRUCTOR'"></app-header-instructor>
+
+  <app-header *ngIf="userRole === 'USER'"></app-header>
+
+</div>
+<main>
+    <div class="course-details">
+        <div class="course-header">
+          <div class="course-info">
+            <h1 style="font-weight: 700; border-bottom: 1px solid rgb(129, 98, 98);border-radius: 5px;text-align: center;">{{course?.title}}</h1>
+            <p>{{course?.description}}</p>
+            <div class="additional-info">
+              <p><i class="far fa-envelope"></i> Level:<strong>{{course?.level}}</strong> </p>
+            </div>
+            <div>
+
+              <button *ngIf="userRole === 'STUDENT' || userRole === 'USER'" (click)="toggleLessonDetails()">Watch Lessons</button>
+              <button *ngIf="userRole === 'INSTRUCTOR'" (click)="toggleStudentDetails(course.id)">Students Enrolled</button>
+
+            </div>
+           
+            <div *ngIf="showLessonDetails">
+                <!-- Display lesson details here -->
+                <ul *ngFor="let lesson of lessonList">
+                    <li >
+                        <div class="lesson-content">
+                            <div class="lesson-name">
+                                {{ lesson.title }}
+                              </div>
+                              <div class="lesson-description">
+                                  {{lesson.description}}
+                              </div>
+                              <div class="lesson-video">
+                                <ng-container *ngIf="lesson.youtubeVideoId.includes('.mp4'); else youtubeVideo">
+                                  <!-- Use <video> tag for mp4 videos -->
+                                  <video controls poster="/assets/images/logo.png" style="width: 100%; max-width: 800px; margin: 0 auto; display: block;">
+                                    <source [src]="'http://localhost:8080/online-learning-platform/auth/video-file/' + lesson.youtubeVideoId" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                  </video>
+                                </ng-container>
+                              
+                                <ng-template #youtubeVideo>
+                                  <!-- Use app-youtube component for non-mp4 videos -->
+                                  <app-youtube [id]="lesson.youtubeVideoId"></app-youtube>
+                                </ng-template>
+                              </div>        
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="showStudentDetails">
+              <div>
+                <h2>Profit:{{studentList.length*course.fees}}</h2>
+              </div>
+              <ul *ngFor="let student of studentList">
+                  <li >
+                      <div class="lesson-content">
+                          <div class="lesson-name">
+                              {{ student.studentName }}
+                            </div>
+                            <div class="lesson-description">
+                                {{student.studentEmail}}
+                            </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </div>
+
+

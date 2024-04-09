@@ -1,0 +1,20 @@
+<app-header-instructor></app-header-instructor>
+<div class="container">
+    <h2 class="heading"><i class="fas fa-shopping-basket"></i> Courses</h2>
+  
+
+      <div *ngFor="let course of courseList" class="item-container" (click)="gotoCourse(course.id)">
+
+        <h3><i class="fas fa-utensils"></i> {{ course.title }}</h3>
+      </div>
+  
+
+    <button class="add-video-button" (click)="addNewVideo()">+ Add Video</button>
+    <button class="add-course-button" (click)="openNewCourseForm()">+ Add Course</button>
+
+    <ng-template #noItems>
+      <div class="no-Items">
+        <h2>No Courses assigned to you.</h2>
+      </div>
+    </ng-template>
+</div>

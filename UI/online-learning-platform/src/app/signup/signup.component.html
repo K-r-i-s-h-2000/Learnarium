@@ -1,0 +1,172 @@
+
+<app-header></app-header>
+<div class="hero-section">
+    <div class="signup-container" >
+        <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+    <div  class="heading">
+        <h2><i class="fas fa-user-plus"></i>Sign up</h2>
+    </div>
+        <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="firstname"><i class="fas fa-user"></i>First Name</label>
+            <input type="text" id="firstname" name="firstname" required formControlName="firstname">
+            <div *ngIf="reactiveForm.get('firstname').hasError('required') && reactiveForm.get('firstname').touched">
+              <small>* First Name is required</small>
+            </div>
+            <div *ngIf="reactiveForm.get('firstname').hasError('pattern') && reactiveForm.get('firstname').touched">
+              <small>* First Name should be captal and contain only alphabetic characters and be 1 to 9 characters long</small>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="lastname"><i class="fas fa-user"></i>Last Name</label>
+            <input type="text" id="lastname" name="lastname" required formControlName="lastname">
+            <div *ngIf="reactiveForm.get('lastname').hasError('required') && reactiveForm.get('lastname').touched">
+              <small>* Last Name is required</small>
+            </div>
+            <div *ngIf="reactiveForm.get('lastname').hasError('pattern') && reactiveForm.get('lastname').touched">
+              <small>* Last Name should contain only alphabetic characters and be 1 to 9 characters long</small>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i>Email</label>
+            <input type="email" id="email" name="email" required formControlName="email">
+            <div *ngIf="reactiveForm.get('email').hasError('required') && reactiveForm.get('email').touched">
+              <small>* Email is required</small>
+            </div>
+            <div *ngIf="reactiveForm.get('email').hasError('email') && reactiveForm.get('email').touched">
+              <small>* Enter a valid email address</small>
+            </div>
+          </div>
+    
+    
+          <div class="form-group">
+            <label for="password"><i class="fas fa-lock"></i>Password</label>
+            <input type="password" id="password" name="password" required formControlName="password">
+            <div *ngIf="reactiveForm.get('password').hasError('required') && reactiveForm.get('password').touched">
+              <small>* Password is required</small>
+            </div>
+            <div *ngIf="reactiveForm.get('password').hasError('minlength') && reactiveForm.get('password').touched">
+              <small>* Password should be at least 8 characters long</small>
+            </div>
+            <div *ngIf="reactiveForm.get('password').hasError('pattern') && reactiveForm.get('password').touched">
+              <small>* Password should contain at least one uppercase letter, one lowercase letter, one digit</small>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="retypepassword"><i class="fas fa-redo-alt"></i>Retype Password</label>
+            <input type="password" id="retypepassword" name="retypepassword" required formControlName="retypepassword">
+            <div *ngIf="reactiveForm.get('retypepassword').hasError('required') && reactiveForm.get('retypepassword').touched">
+              <small>Retype password is required</small>
+            </div>
+            <div *ngIf="reactiveForm.hasError('passwordMismatch') && reactiveForm.get('retypepassword').touched">
+              <small>* Passwords do not match</small>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="role"><i class="fas fa-user-tag"></i>Role</label>
+            <select (change)="getDetails($event)" id="role" name="role" formControlName="role">
+              <option value="1">Student</option>
+              <option value="2">Instructor</option>
+            </select>
+          </div>
+          
+    <div *ngIf="showStudentForm">
+      <h3>Student Information</h3>
+      <div class="form-group" formGroupName="student">
+        <label for="studentName">Name</label>
+        <input type="text" id="studentName" name="studentName" placeholder="Enter student name" formControlName="studentName">
+        <div *ngIf="reactiveForm.get('student.studentName').hasError('required') && reactiveForm.get('student.studentName').touched">
+          <small>* Field is required</small>
+        </div>
+        <div *ngIf="reactiveForm.get('student.studentName').hasError('pattern') && reactiveForm.get('student.studentName').touched">
+          <small>* Name should start with a capital letter and contain only letters</small>
+        </div>
+      </div>
+      <div class="form-group" formGroupName="student">
+        <label for="studentAddress">Address</label>
+        <input type="text" id="studentAddress" name="studentAddress" placeholder="Enter student address" formControlName="studentAddress">
+        <div *ngIf="reactiveForm.get('student.studentAddress').hasError('pattern') && reactiveForm.get('student.studentAddress').touched">
+          <small>* Address should contain only letters, numbers, spaces, and commas</small>
+        </div>
+      </div>
+      <div class="form-group" formGroupName="student">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" formControlName="studentDateOfBirth">
+        <div *ngIf="reactiveForm.get('student.studentDateOfBirth').hasError('required') && reactiveForm.get('student.studentDateOfBirth').touched">
+          <small>* Field is required</small>
+        </div>
+        <div *ngIf="reactiveForm.get('student.studentDateOfBirth').hasError('futureDate') && reactiveForm.get('student.studentDateOfBirth').touched">
+          <small>* Date of birth cannot be in the future</small>
+        </div>
+      </div>
+      <div class="form-group" formGroupName="student">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" formControlName="studentGender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    
+         <!-- Instructor-specific form fields -->
+    <div *ngIf="showInstructorForm">
+      <h3>instructor Information</h3>
+      <div class="form-group" formGroupName="instructor">
+        <label for="instructorName">Name</label>
+        <input type="text" id="instructorName" name="instructorName" placeholder="Enter instructor name" formControlName="instructorName">
+        <div *ngIf="reactiveForm.get('instructor.instructorName').hasError('required') && reactiveForm.get('instructor.instructorName').touched">
+          <small>* Field is required</small>
+        </div>
+        <div *ngIf="reactiveForm.get('instructor.instructorName').hasError('pattern') && reactiveForm.get('instructor.instructorName').touched">
+          <small>* Instructor name should start with a capital letter and contain only letters</small>
+        </div>
+      </div>
+      <div class="form-group" formGroupName="instructor">
+        <label for="instructorDescription">Description</label>
+        <input type="text" id="instructorDescription" name="instructorDescription" placeholder="Enter instructor description" formControlName="instructorDescription">
+        <div *ngIf="reactiveForm.get('instructor.instructorDescription').hasError('pattern') && reactiveForm.get('instructor.instructorDescription').touched">
+          <small>* Special characters are not allowed</small>
+        </div>
+      </div>
+     <div class="form-group" formGroupName="instructor">
+        <label for="instructorEmail">Email</label>
+        <input type="email" id="instructorEmail" name="instructorEmail" placeholder="Enter instructor email" formControlName="email" >
+        <div *ngIf="reactiveForm.get('instructor.instructorEmail').hasError('email') && reactiveForm.get('instructor.instructorEmail').touched">
+          <small>* Enter a valid email address</small>
+        </div>
+      </div> 
+      <div class="form-group" formGroupName="instructor">
+        <label for="instructorWebsite">Website</label>
+        <input type="text" id="instructorWebsite" name="instructorWebsite" placeholder="Enter instructor website" formControlName="website">
+        <div *ngIf="reactiveForm.get('instructor.website').hasError('pattern') && reactiveForm.get('instructor.website').touched">
+          <small>* Enter a valid website URL</small>
+        </div>
+      </div>
+      
+      
+      <div class="form-group" formGroupName="instructor">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" formControlName="instructorGender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+    </div>
+    
+    
+    
+        <button type="submit"><i class="fas fa-user-plus"></i>Register</button>
+        </form>
+        <p>Already have an account? <a routerLink="/Login"><i class="fas fa-sign-in-alt"></i>Login</a></p>
+</div>
+</div>
+    
+    
+    

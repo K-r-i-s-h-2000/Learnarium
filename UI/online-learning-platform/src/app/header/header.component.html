@@ -1,0 +1,15 @@
+
+<div class="sidebar-logo">
+    <img src="./assets/images/logo-navbar.png" alt="Logo" class="logo" (click)="gotoHome()"> 
+    <div class="logo-text" (click)="gotoHome()"><b>LEARNARIUM</b></div>
+    <div class="menu-icon" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="menu-dropdown" [class.open]="isMenuOpen">
+      <button class="menu-item" (click)="gotoHome()">Home</button>
+      <button class="menu-item" (click)="gotoCourse()">Free Courses</button>
+      <button class="menu-item" (click)="gotoAboutus()">About Us</button>
+    </div>
+  </div>

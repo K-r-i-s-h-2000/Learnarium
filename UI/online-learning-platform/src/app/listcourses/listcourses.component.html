@@ -1,0 +1,18 @@
+<app-header-landing></app-header-landing>
+<div class="container">
+    <h2 class="heading"><i class="fas fa-shopping-basket"></i> Courses</h2>
+  
+    <div *ngIf="courseList.length > 0; else noItems" class="items-container">
+      <div *ngFor="let course of courseList" class="item" (click)="gotoCourse(course.id)">
+
+        <h3><i class="fas fa-utensils"></i> {{ course.title }}</h3>
+      </div>
+  
+    </div>
+  
+    <ng-template #noItems>
+      <div class="no-Items">
+        <h2>No Courses available at the moment.</h2>
+      </div>
+    </ng-template>
+  </div>

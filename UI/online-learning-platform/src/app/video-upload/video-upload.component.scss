@@ -1,0 +1,41 @@
+.form-container {
+    padding: 20px;
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+  
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+/* styles.css */
+.mat-snack-bar-container {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}  
+  

@@ -1,0 +1,34 @@
+<app-header-instructor></app-header-instructor>
+<div class="container">
+    <h2 class="heading"><i class="fas fa-shopping-basket"></i> My Revenue</h2>
+    <div class="heading2">
+        <h2 class="total-profit">Total Profit: {{ totalProfit | currency: 'INR' }}</h2>
+    </div>
+
+    
+        <!-- Course details rows -->
+        <div >
+            <table>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Profit</th>
+                </tr>
+                <tr *ngFor="let course of courseWithStudent" class="item-container">
+                    <td>
+                        <span><i class="fas fa-utensils"></i> {{ course.title }}</span>
+                    </td>
+                    <td >
+                        <span class="profit">{{ course.fees * course.studentList.length | currency: 'INR' }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+      </div>
+  
+   
+    <ng-template #noItems>
+      <div class="no-Items">
+        <h2>No Courses assigned to you.</h2>
+      </div>
+    </ng-template>

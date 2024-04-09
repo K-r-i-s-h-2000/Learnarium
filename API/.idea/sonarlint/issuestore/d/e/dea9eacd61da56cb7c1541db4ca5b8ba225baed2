@@ -1,0 +1,22 @@
+
+\	java:S112±"FDefine and throw a dedicated exception instead of using a generic one.(é“¨Ë
+[	java:S112È"FDefine and throw a dedicated exception instead of using a generic one.(ÁÐÔ
+x
+java:S1488»"aImmediately return this expression instead of assigning it to the temporary variable "videoData".(ºâÖ«
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8»¶¥€å1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¼¶¥€å1
+V	java:S125-"<This block of commented-out lines of code should be removed.(Ü´ÉŠøÿÿÿÿ
+V	java:S125;"<This block of commented-out lines of code should be removed.(ÌÓ…–ûÿÿÿÿ
+V	java:S125N"<This block of commented-out lines of code should be removed.(þïÜ–üÿÿÿÿ
+u
+java:S5996W"_Remove or replace this boundary that will never match because it appears after mandatory input.(§ÎµÃ
+B
+java:S5855W",Remove or rework this redundant alternative.(§ÎµÃ
+B
+java:S5855W",Remove or rework this redundant alternative.(§ÎµÃ
+B
+java:S5855W",Remove or rework this redundant alternative.(§ÎµÃ
+j
+java:S5843W"TSimplify this regular expression to reduce its complexity from 29 to the 20 allowed.(§ÎµÃ

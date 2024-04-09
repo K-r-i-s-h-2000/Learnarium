@@ -1,0 +1,47 @@
+
+K
+java:S1066„"/Merge this if statement with the enclosing one.(Ü±é¿ùÿÿÿÿ
+F
+java:S1066ª"/Merge this if statement with the enclosing one.(à´Öß
+C
+java:S5411]"(Use a primitive boolean expression here.(„ƒ‰üÿÿÿÿ
+=
+java:S5411n"(Use a primitive boolean expression here.(ì¾¥f
+C
+java:S5411|"(Use a primitive boolean expression here.(„ƒ‰üÿÿÿÿ
+D
+java:S5411Õ"(Use a primitive boolean expression here.(ìªşÿÿÿÿ
+D
+java:S5411ƒ"(Use a primitive boolean expression here.(ìªşÿÿÿÿ
+?
+java:S5411¥"(Use a primitive boolean expression here.(»À¥İ
+D
+java:S5411©"(Use a primitive boolean expression here.(ìªşÿÿÿÿ
+?
+java:S5411º"(Use a primitive boolean expression here.(ˆ¹±“
+D
+java:S5411¿"(Use a primitive boolean expression here.(ìªşÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ
+Y
+java:S1854-">Remove this useless assignment to local variable "levelValue".(ÙŒˆÖşÿÿÿÿ
+J
+java:S1481-"/Remove this unused "levelValue" local variable.(ÙŒˆÖşÿÿÿÿ
+i
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÂúºÁ
+W
+java:S1854½"@Remove this useless assignment to local variable "courseModels".(ò×
+H
+java:S1481½"1Remove this unused "courseModels" local variable.(ò×
+W	java:S125Ç"<This block of commented-out lines of code should be removed.(´Å”ëüÿÿÿÿ
+R	java:S125Ø"<This block of commented-out lines of code should be removed.(îú°ı

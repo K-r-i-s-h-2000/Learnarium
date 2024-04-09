@@ -1,0 +1,53 @@
+
+.hero-section {
+
+
+  height: 350px;
+  width: fit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(12, 10, 10);
+  text-align: center;
+  z-index: 1;
+  object-fit: cover;
+  flex-direction: column;
+
+  .logo-container {
+      width: 150px; /* Adjust the width to your desired size */
+      height: auto; /* Maintain aspect ratio */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .login-signup-container {
+          display: flex;
+          white-space: nowrap;
+          gap: 10px;
+          margin-bottom: 20px;
+      }
+
+      .login-signup {
+          margin: 10px;
+          padding: 15px 30px;
+          font-size: 1.2em;
+          background-color: #0056b3;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          
+
+          &:hover {
+              background-color: hsl(207, 92%, 47%);
+          }
+      }
+
+      .caption {
+          font-size: 2.5em;
+          margin-top: 10px;
+
+      }
+  }
+}

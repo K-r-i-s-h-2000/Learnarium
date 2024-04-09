@@ -1,0 +1,35 @@
+<app-header-landing></app-header-landing>
+<div class="scroll-container" style="max-width:100%; overflow-x: auto; white-space: nowrap;">
+    <div *ngFor="let category of categories" style="display: inline-block;">
+        <p>{{category.categoryName}}</p>
+        <img src="{{category.image}}"  style="width: 144px; height: 145px; padding: 5px;"
+        (click)="loadCoursesByCategory(category.id)">
+    </div>
+</div>
+<div *ngIf="selectedCategory" class="item-container">
+    <h2>Courses under {{ selectedCategory.categoryName }}</h2>
+    <div *ngIf="courses.length > 0; else noItems">
+
+    </div>
+    <ul class="item-grid">
+      <li *ngFor="let course of courses" class="item-item" (click)="gotoCourse(course.id)">
+        <div class="item-content">
+            <div class="course-name">
+                {{ course.title }}
+              </div>
+              <div class="course-description">
+                  {{course.description}}
+              </div>
+              <div class="course-level">
+                  {{course.level}}
+              </div>
+        </div>
+      </li>
+    </ul> 
+</div>
+
+<ng-template #noItems>
+    <div class="no-Items">
+      <h2>No Courses available at the moment.</h2>
+    </div>
+</ng-template>

@@ -1,0 +1,6 @@
+projectKey=learnarium-app
+serverUrl=http://localhost:9000
+serverVersion=10.4.0.87286
+dashboardUrl=http://localhost:9000/dashboard?id=learnarium-app
+ceTaskId=0634c503-e1fc-4f34-9b70-10296b7f0691
+ceTaskUrl=http://localhost:9000/api/ce/task?id=0634c503-e1fc-4f34-9b70-10296b7f0691

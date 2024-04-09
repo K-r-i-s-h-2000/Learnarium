@@ -1,0 +1,66 @@
+
+<form [formGroup]="courseForm" (ngSubmit)="onSubmit()" class="form-container">
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" required>
+    <div *ngIf="courseForm.get('title').hasError('required') && courseForm.get('title').touched" class="error-message">
+        Title is required.
+    </div>
+
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <div *ngIf="courseForm.get('description').hasError('maxlength') && courseForm.get('description').touched" class="error-message">
+        Description should not exceed 250 characters.
+    </div>
+  
+    
+    <label for="categoryId">Category:</label>
+     <select id="categoryId" formControlName="categoryId" class="category">
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.categoryName }}</option>
+    </select>
+    <div *ngIf="courseForm.get('categoryId').hasError('required') && courseForm.get('categoryId').touched" class="error-message">
+        Category is required.
+    </div>
+
+    
+
+    <div formArrayName="lessons" class="lessons-section">
+        <div *ngFor="let lessonGroup of lessonsFormArray.controls; let i = index">
+          <h3>Lesson {{ i + 1 }}</h3>
+          <label for="lessonTitle">Lesson Title:</label>
+          <input type="text" id="lessonTitle" [formControl]="lessonFormControl('title', i)" required>
+
+
+          <label for="lessonDescription">Lesson Description:</label>
+          <textarea id="lessonDescription" [formControl]="lessonFormControl('description', i)"></textarea>
+    
+          <label for="videoId">Video Title:</label>
+          <select id="videoId" [formControl]="lessonFormControl('videoId', i)" class="video" >
+             <option *ngFor="let video of videos" [value]="video.id">{{ video.title }}</option>
+         </select>
+        </div>
+    </div>
+    <button type="button" (click)="addLesson()" class="add-lesson-button">Add Lesson</button>
+
+  
+    <label for="level">Level:</label>
+    <select id="level" name="level" formControlName="level" required>
+      <option value="1">BEGINNER</option>
+      <option value="2">INTERMEDIATE</option>
+      <option value="3">ADVANCED</option>
+    </select>
+    <div *ngIf="courseForm.get('level').hasError('required') && courseForm.get('level').touched" class="error-message">
+        Level is required.
+    </div>
+  
+    <label for="fees">Fees:</label>
+    <input type="number" id="fees" formControlName="fees" required>
+    <div *ngIf="courseForm.get('fees').hasError('required') && courseForm.get('fees').touched" class="error-message">
+        Fees is required.
+    </div>
+    <div *ngIf="(courseForm.get('fees').hasError('min') || courseForm.get('fees').hasError('max')) && courseForm.get('fees').touched" class="error-message">
+        Fees should be between 0 and 2000.
+    </div>
+  
+    <button type="submit" [disabled]="courseForm.invalid" [ngClass]="{'disabled-button': courseForm.invalid}">Submit</button>
+  </form>
+ 

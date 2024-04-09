@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="523c4b88-780d-43ab-adc5-07166f4b0312" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/LogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/entity/EntityDoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/entity/Instructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/model/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/model/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/model/Instructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/model/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/repository/InstructorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewAPI/uplift/src/main/java/com/example/uplift/service/AuthenticationServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/src/app/listitems/listitems.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/src/app/listitems/listitems.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/src/app/reviews-and-ratings/reviews-and-ratings.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/src/app/reviews-and-ratings/reviews-and-ratings.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/src/app/service/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/src/app/service/order.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/src/app/tocart/tocart.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/src/app/tocart/tocart.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UI/src/app/tocart/tocart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../UI/src/app/tocart/tocart.component.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2b1X0ypLAKzOcz5KmO4rMkJFppb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "online__learning__platform",
+    "last_opened_file_path": "C:/CodeBase/daksar/Krishna"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="523c4b88-780d-43ab-adc5-07166f4b0312" name="Changes" comment="" />
+      <created>1705383339690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705383339690</updated>
+    </task>
+    <servers />
+  </component>
+</project>

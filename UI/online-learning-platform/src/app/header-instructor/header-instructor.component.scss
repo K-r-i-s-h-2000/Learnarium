@@ -1,0 +1,124 @@
+
+
+.sidebar-logo {
+    background-color: hwb(0 100% 0% / 0.884);
+    padding: 10px;
+    box-shadow: 0 0 10px hwb(0 100% 0% / 0.884);
+    display: flex;
+    align-items: center;
+ 
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+  
+    .menu-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5em;
+      color: #333;
+    }
+  
+    .logo-text {
+      font-weight: bold;
+      font-size: 1.2em;
+      cursor: pointer;
+      
+    }
+  
+    .menu-buttons {
+      display: flex;
+      position: relative;
+      left: 65%;
+  
+      button {
+        margin-left: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        color: #333;
+        transition: box-shadow 0.3s ease;
+  
+        i {
+          margin-right: 5px;
+        }
+        &.active {
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for the active state */
+        }
+    }
+  }
+}  
+
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px; /* Increased minimum width */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #333;
+  padding: 14px 20px; /* Increased padding */
+  font-size: 16px; /* Adjusted font size */
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Your existing CSS styles */
+/* Ensure you have the correct font-awesome library or CDN linked in your HTML */
+
+
+h1 {
+  margin: 0px;
+  color: #ddd;
+  display: flex;
+  cursor: pointer;
+  font-weight: 1000;
+  font-size: 2.5rem; /* Adjust the size */
+  text-shadow: 2px 2px 2px #000; /* Add a text shadow for effect */
+}
+
+h1:hover {
+  color: #fff; /* Change color on hover */
+  transition: color 0.3s ease; /* Add transition effect */
+}
+
+
+@media only screen and (max-width: 768px) {
+  .main-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .ul-div {
+    flex-direction: column;
+  }
+
+  .ul-div > li {
+    padding: 10px;
+    font-size: small;
+  }
+
+  /* Adjust other styles for smaller screens as needed */
+}

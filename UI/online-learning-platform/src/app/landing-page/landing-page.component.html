@@ -1,0 +1,45 @@
+<app-header-landing></app-header-landing>
+
+<div class="background-landing">
+
+  <h2 mat-h2 style="text-align: center;font-weight:bolder;font-size: 35px;color: rgb(255, 255, 255);">Categories</h2>
+  <div class="category-container">
+    <div *ngFor="let category of categories" (click)="loadCoursesByCategory(category.id)" class="category-card">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <img class="image-container" src="/assets/images/logo-navbar.png">
+          </div>
+          <mat-card-title>{{category.categoryName}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class="image" src="{{category.image}}" alt="Category Image">
+      </mat-card>
+    </div>
+  </div>
+  <div *ngIf="selectedCategory" class="item-container">
+
+    <div class="category-details" *ngIf="showCategoryDetails">
+      <h2 mat-h2 class="course-heading">Courses under {{ selectedCategory.categoryName }}</h2>
+      <div *ngIf="courses.length > 0; else noItems">
+        <mat-grid-list cols="3" rowHeight="2:1">
+          <mat-grid-tile *ngFor="let course of courses" (click)="gotoCourse(course.id)">
+            <mat-card class="course-card">
+              <mat-card-content>
+                <mat-card-title>{{ course.title }}</mat-card-title>
+                <mat-card-subtitle>{{course.level}}</mat-card-subtitle>
+                <p>{{course.description}}</p>
+              </mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      <button mat-button (click)="closeCategoryDetails()"><strong>X</strong></button>
+    </div>
+    <ng-template #noItems>
+      <div class="no-Items">
+        <h2>No Courses available at the moment.</h2>
+      </div>
+    </ng-template>
+  </div>
+  
+</div>

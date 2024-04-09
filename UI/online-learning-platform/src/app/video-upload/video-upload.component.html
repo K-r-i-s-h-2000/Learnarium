@@ -1,0 +1,28 @@
+<!-- <form [formGroup]="videoForm" (ngSubmit)="onSubmit1()" class="form-container">
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" required>
+  
+    <label for="file">Select Video File (MP4 only):</label>
+    <input type="file" id="file" (change)="onFileSelected($event)" accept=".mp4" required>
+  
+    <button type="submit">Upload Video</button>
+  </form> -->
+  <form [formGroup]="videoForm" (ngSubmit)="onSubmit()" class="form-container">
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" required>
+  
+    <label for="file">Select Video File (MP4 only,Max size:20MB):</label>
+    <input type="file" id="file" (change)="onFileSelected($event)" accept=".mp4" required>
+  
+   
+  
+    <div *ngIf="uploadFileOption">
+        <h3 style="text-align: center;"><strong>OR</strong></h3>
+      <label for="link">YouTube Link:</label>
+      <input type="text" id="link" formControlName="link">
+    </div>
+  
+    <button type="submit">Upload Video</button>
+  </form>
+  
+  

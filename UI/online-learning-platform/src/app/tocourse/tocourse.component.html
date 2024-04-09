@@ -1,0 +1,23 @@
+<app-header-landing></app-header-landing>
+<main>
+    <div class="course-details">
+        <div class="course-header">
+          <!-- <div class="course-image" routerLink="">
+            <img src={{courseDetails.image}} alt="course Image" />
+          </div> -->
+          <div class="course-info">
+            <h1>{{course?.title}}</h1>
+            <p>{{course?.description}}</p>
+            <div class="additional-info">
+              <p><i class="far fa-envelope"></i> Level: {{course?.level}}</p>
+              <p><i class="fas fa-phone-alt"></i> Fees: {{course?.fees | currency : 'INR'}}</p>
+              <!-- <p><i class="fas fa-map-marker-alt"></i> Latitude: {{courseDetails.courseLatitude}}</p>
+              <p><i class="fas fa-map-marker-alt"></i> Longitude: {{courseDetails.courseLongitude}}</p> -->
+            </div>
+            <button *ngIf="!isEnrolled" (click)="enrollNow(course.id)"><i class="fas fa-pencil-alt"></i>Enroll Now</button>
+            <!-- Assuming the button is defined in your component's template -->
+            <button *ngIf="isEnrolled" (click)="goToCourse(course.id)">Go to Course</button>
+
+        </div>
+    </div>
+

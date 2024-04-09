@@ -1,0 +1,22 @@
+<div class="sidebar-logo">
+    <img src="./assets/images/logo-navbar.png" alt="Logo" class="logo" (click)="gotoCategories()"> 
+    <div class="logo-text" (click)="gotoCategories()"><b>LEARNARIUM</b></div>
+    <div class="menu-buttons">
+        <button class="home-btn" (click)="gotoCategories()" [ngClass]="{'active': activeMenuItem === 'Category'}"><i class="fa fa-home"></i>Categories</button>
+        <button class="courses-btn" (click)="gotoEnroll()" [ngClass]="{'active': activeMenuItem === 'EnrolledCourses'}"><i class="fa fa-book"></i>My Learnings</button>
+        <div class="dropdown">
+            <button class="dropbtn">Profile
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a (click)="gotoEnroll()">
+                <i class="fas fa-clipboard-list"></i> Enrolled Courses
+              </a>
+
+              <a (click)="Logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </div>
+    </div>
+</div>
